@@ -1,7 +1,12 @@
 # murcko_scaffold_frequencies
-Extract Murcko scaffolds from a set of molecules and counts scaffold frequencies
+
+Extracts Murcko scaffolds from a set of molecules and counts scaffold frequencies
+
+Usage
 
 Rscript scaffold_frequencies.R smiles.csv scaffolds.csv
+
+
 
 The input smiles.csv file should contain a single column with the molecules in the SMILES format
 
