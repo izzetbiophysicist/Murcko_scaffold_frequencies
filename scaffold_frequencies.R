@@ -1,9 +1,5 @@
 library(rcdk)
 
-args = commandArgs(trailingOnly=TRUE)
-
-all_compounds <- read.csv(args[1], row.names = 1)
-
 count_scaffolds <-function(smiles_list){
   sclist <- c()
   for(i in 1:length(smiles_list)){
@@ -26,6 +22,14 @@ count_scaffolds <-function(smiles_list){
   }
 }
 
-scaffolds <- count_scaffolds(all_compounds$smiles)
+### Take args and execute
+
+args = commandArgs(trailingOnly=TRUE)
+
+all_compounds <- read.csv(args[1], header=FALSE)
+all_compounds <- as.character(all_compounds[,1])
+
+
+scaffolds <- count_scaffolds(all_compounds)
 
 write.csv(scaffolds, paste(args[2], "scaffolds.csv", sep=""))
