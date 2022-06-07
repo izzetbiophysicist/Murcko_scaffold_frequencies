@@ -1,4 +1,4 @@
-# murcko_scaffold_frequencies
+# Murcko_scaffold_frequencies
 
 Used the RCDK library to extract Murcko scaffolds from a set of molecules and count the frequency of scaffolds
 
